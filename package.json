@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "electron-compile": "^3.3.4",
+    "material-ui": "^0.15.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-redux": "^4.4.5",
+    "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2",
     "redux-actions": "^0.10.1",
     "redux-devtools": "^3.3.1"
