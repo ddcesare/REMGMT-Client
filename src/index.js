@@ -9,8 +9,10 @@ import configureStore from './store/configureStore'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 require('./favicon.ico');
 import { syncHistoryWithStore } from 'react-router-redux'
+import { loadClients } from './actions/clientActions'
 
 const store = configureStore()
+store.dispatch(loadClients())
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store)

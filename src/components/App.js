@@ -9,6 +9,7 @@ const App = (props) => {
         title="REMGMT"
       />
       <IndexLink to="/">Home</IndexLink>
+      <Link to="/clients">Clients</Link>
       <br/>
       {props.children}
     </div>
