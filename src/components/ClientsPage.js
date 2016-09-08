@@ -1,31 +1,31 @@
 import React, {PropTypes} from 'react'
+import {Link} from 'react-router'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {List, ListItem} from 'material-ui/List'
 import ActionGrade from 'material-ui/svg-icons/action/grade'
 import Avatar from 'material-ui/Avatar'
-import {pinkA200, transparent} from 'material-ui/styles/colors'
+import {pinkA200} from 'material-ui/styles/colors'
 import * as clientActions from '../actions/clientActions'
 
 class ClientsPage extends React.Component {
   constructor (props, context) {
     super(props, context)
-    this.state = {
-      client: {name: ''}
-    }
   }
 
   render () {
     return (
       <div>
         <List>
-          {this.props.clients.map(client => {
+          {this.props.clients.map((client, index) => {
             return (
-              <ListItem
-                primaryText={client.name}
-                leftIcon={<ActionGrade color={pinkA200} />}
-                rightAvatar={<Avatar src="images/avatar.jpeg" />}
-              />
+              <Link key={index} to={`/client/${client.id}`}>
+                <ListItem
+                  primaryText={`${client.surname}, ${client.name}`}
+                  leftIcon={<ActionGrade color={pinkA200} />}
+                  rightAvatar={<Avatar src="images/avatar.jpeg" />}
+                />
+              </Link>
             )
           })}
         </List>
