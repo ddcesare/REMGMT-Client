@@ -29,13 +29,8 @@ class ClientPage extends React.Component {
         <CardHeader
           title={client.name}
           subtitle={client.type}
-          avatar="images/jsa-128.jpg"
+          avatar="/images/avatar.jpeg"
         />
-        <CardMedia
-          overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-        >
-          <img src="images/nature-600-337.jpg" />
-        </CardMedia>
         <CardTitle title="Card title" subtitle="Card subtitle" />
         <CardText>
           {client.description}
